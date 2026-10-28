@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RND Tech & Solutions | Enterprise Automation & Web Engineering</title>
+  <meta name="description" content="Tier-1 DevOps and cloud-engineered web apps and automations for contractors and business owners. Eliminate manual bottlenecks.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#09090b',
+            brandCard: '#111116',
+            brandBorder: '#27272a',
+            brandBlue: '#2563eb',
+            brandCyan: '#06b6d4'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    
+    body {
+      background-color: #09090b;
+      color: #fafafa;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(17, 17, 22, 0.75);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .glass-nav {
+      background: rgba(9, 9, 11, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .grid-glow {
+      background-image: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.15) 0%, transparent 60%);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-brandBlue selection:text-white">
+
+  <!-- Toast Notification System -->
+  <div id="toastContainer" class="fixed top-5 right-5 z-50 flex flex-col gap-3"></div>
+
+  <!-- Top Announcement Bar -->
+  <aside aria-label="Announcement" class="w-full bg-gradient-to-r from-blue-950/40 via-zinc-900 to-blue-950/40 border-b border-brandBorder/60 py-2 text-center text-xs text-zinc-400">
+    <span>Architected by Tier-1 Cloud & DevOps Engineers. <strong class="text-white font-medium">Free Workflow Architecture Audit Available.</strong></span>
+  </aside>
+
+  <!-- Sticky Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-nav transition-all duration-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-brandBlue to-brandCyan flex items-center justify-center text-white font-black text-sm shadow-lg shadow-blue-500/20 group-hover:scale-105 transition-transform">
+          RND
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm tracking-wide text-white">RND Tech & Solutions</span>
+          <span class="text-[10px] text-zinc-400 uppercase tracking-widest font-mono">Enterprise Automation</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+        <a href="#services" class="hover:text-white transition-colors">Core Pillars</a>
+        <a href="#calculator" class="hover:text-white transition-colors">ROI Calculator</a>
+        <a href="#process" class="hover:text-white transition-colors">Architecture</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+      </nav>
+
+      <!-- CTA Action -->
+      <div class="flex items-center gap-4">
+        <a href="#contact" class="px-4 py-2 text-xs font-semibold rounded-lg bg-brandBlue text-white hover:bg-blue-600 transition-all shadow-md shadow-blue-600/20 flex items-center gap-1.5">
+          <span>Book Discovery</span>
+          <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-28 px-4 sm:px-6 lg:px-8 grid-glow border-b border-brandBorder/40">
+      <div class="max-w-5xl mx-auto text-center space-y-6">
+        
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-brandCyan text-xs font-mono font-medium">
+          <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          ZERO-MAINTENANCE ENTERPRISE PLATFORMS
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
+          Eliminate Operational Chaos With <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Engineered Automation</span>
+        </h1>
+
+        <p class="max-w-3xl mx-auto text-base sm:text-lg text-zinc-400 leading-relaxed font-normal">
+          We build custom cloud applications, contractor operational platforms, and workflow pipelines for growing businesses. Replace spreadsheets, phone chases, and manual entry with software engineered to enterprise uptime standards.
+        </p>
+
+        <!-- Dynamic Live Telemetry KPI Bar -->
+        <div class="pt-6 pb-2 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-4xl mx-auto">
+          <div class="glass-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-white tracking-tight">85%+</div>
+            <div class="text-xs text-zinc-400 mt-1">Manual Hours Cut</div>
+          </div>
+          <div class="glass-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-white tracking-tight">99.99%</div>
+            <div class="text-xs text-zinc-400 mt-1">Uptime Architecture</div>
+          </div>
+          <div class="glass-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-white tracking-tight">&lt; 30 Days</div>
+            <div class="text-xs text-zinc-400 mt-1">Deployment Turnaround</div>
+          </div>
+          <div class="glass-card rounded-xl p-4 text-center">
+            <div class="text-2xl font-bold text-white tracking-tight">100%</div>
+            <div class="text-xs text-zinc-400 mt-1">Custom Ownership</div>
+          </div>
+        </div>
+
+        <!-- Hero CTAs -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          <a href="#calculator" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-gradient-to-r from-brandBlue to-blue-600 hover:from-blue-600 hover:to-blue-700 font-semibold text-sm shadow-xl shadow-blue-500/25 flex items-center justify-center gap-2 transition-all">
+            <i data-lucide="calculator" class="w-4 h-4"></i>
+            Calculate Your Manual Cost
+          </a>
+          <a href="#services" class="w-full sm:w-auto px-6 py-3 rounded-xl glass-card hover:bg-zinc-800/60 font-semibold text-sm text-zinc-300 hover:text-white transition-all flex items-center justify-center gap-2">
+            <span>Explore Pillars</span>
+            <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Motto & Philosophy Banner -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 border-b border-brandBorder/40 bg-zinc-950/60">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div class="space-y-1">
+          <div class="text-xs uppercase tracking-widest text-brandCyan font-mono">Our Operational Creed</div>
+          <div class="text-xl font-bold text-white tracking-tight">"Stop spending human hours on machine tasks."</div>
+        </div>
+        <div class="max-w-md text-xs text-zinc-400 leading-relaxed">
+          Founded and led by enterprise DevOps and systems specialists, we translate big-tech reliability into lean, fast-acting software systems for contractors and business operators.
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Core Service Pillars (Interactive Bento Grid) -->
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center space-y-3 mb-16">
+        <h2 class="text-xs font-mono font-bold tracking-widest text-brandBlue uppercase">Engineering Capabilities</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-white">Engineered For Zero Operational Friction</h3>
+        <p class="text-sm sm:text-base text-zinc-400 max-w-2xl mx-auto">Tailored solutions that replace messy paperwork, fragmented WhatsApp orders, and copy-paste admin chores.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Bento Card 1 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-blue-500/40 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-brandCyan group-hover:scale-110 transition-transform">
+              <i data-lucide="layout" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">Custom Web Applications</h4>
+            <p class="text-xs text-zinc-400 leading-relaxed">High-performance portals, real-time client booking dashboards, and custom frontends engineered with modern frameworks.</p>
+          </div>
+          <ul class="mt-6 pt-4 border-t border-zinc-800 text-xs text-zinc-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandCyan"></i> Single-Page Speed</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandCyan"></i> Role-Based Access</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-brandCyan"></i> Multi-Device Sync</li>
+          </ul>
+        </div>
+
+        <!-- Bento Card 2 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-cyan-500/40 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="cpu" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">Workflow Automation</h4>
+            <p class="text-xs text-zinc-400 leading-relaxed">Cross-platform integration across CRM, email, accounting, and messaging platforms to process tasks with zero manual intervention.</p>
+          </div>
+          <ul class="mt-6 pt-4 border-t border-zinc-800 text-xs text-zinc-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Auto Quotations</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Messaging Bots</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-cyan-400"></i> Automated Invoicing</li>
+          </ul>
+        </div>
+
+        <!-- Bento Card 3 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-purple-500/40 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="hammer" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">Contractor & Field Tools</h4>
+            <p class="text-xs text-zinc-400 leading-relaxed">Custom estimating calculators, field dispatch apps, and work-order trackers built for quick mobile entry on job sites.</p>
+          </div>
+          <ul class="mt-6 pt-4 border-t border-zinc-800 text-xs text-zinc-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Instant Cost Estimators</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Dispatch Schedules</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-purple-400"></i> Job Status Logs</li>
+          </ul>
+        </div>
+
+        <!-- Bento Card 4 -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-emerald-500/40 transition-all duration-300 group">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform">
+              <i data-lucide="cloud" class="w-6 h-6"></i>
+            </div>
+            <h4 class="text-lg font-bold text-white">DevOps & Cloud Systems</h4>
+            <p class="text-xs text-zinc-400 leading-relaxed">Enterprise server deployment, zero-maintenance containerization, and database backups that keep your business running 24/7/365.</p>
+          </div>
+          <ul class="mt-6 pt-4 border-t border-zinc-800 text-xs text-zinc-300 space-y-2">
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Automated Backups</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> 99.99% Cloud SLA</li>
+            <li class="flex items-center gap-2"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i> Hardened Security</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Interactive ROI / Hours-Saved Calculator -->
+    <section id="calculator" class="py-20 px-4 sm:px-6 lg:px-8 border-y border-brandBorder/40 bg-zinc-950">
+      <div class="max-w-4xl mx-auto glass-card rounded-3xl p-8 sm:p-12 border border-brandBorder/80">
+        
+        <div class="text-center space-y-2 mb-10">
+          <span class="text-xs font-mono font-bold tracking-widest text-brandCyan uppercase">Interactive Cost Simulation</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Calculate Your Lost Operating Capital</h3>
+          <p class="text-xs sm:text-sm text-zinc-400">Estimate how much money your business wastes each month on repetitive, manual data entry.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <!-- Sliders -->
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-2">
+                <label for="teamSize" class="text-zinc-300">Staff / Subcontractors Involved</label>
+                <span id="teamSizeVal" class="text-brandCyan font-mono font-bold">5 people</span>
+              </div>
+              <input type="range" id="teamSize" min="1" max="50" value="5" class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-brandBlue">
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-2">
+                <label for="hoursPerWeek" class="text-zinc-300">Manual Hours Lost / Person / Week</label>
+                <span id="hoursPerWeekVal" class="text-brandCyan font-mono font-bold">8 hrs</span>
+              </div>
+              <input type="range" id="hoursPerWeek" min="1" max="40" value="8" class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-brandBlue">
+            </div>
+
+            <div>
+              <div class="flex justify-between text-xs font-medium mb-2">
+                <label for="hourlyRate" class="text-zinc-300">Blended Hourly Wage ($)</label>
+                <span id="hourlyRateVal" class="text-brandCyan font-mono font-bold">$35 / hr</span>
+              </div>
+              <input type="range" id="hourlyRate" min="15" max="150" step="5" value="35" class="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-brandBlue">
+            </div>
+          </div>
+
+          <!-- Calculated Outcome Output -->
+          <div class="bg-zinc-900/90 rounded-2xl p-6 border border-zinc-800 flex flex-col items-center justify-center text-center space-y-4">
+            <div class="text-xs text-zinc-400 uppercase tracking-widest font-mono">Estimated Annual Capital Loss</div>
+            <div id="annualLoss" class="text-4xl sm:text-5xl font-black text-rose-500 tracking-tight">$72,800</div>
+            
+            <div class="w-full pt-4 border-t border-zinc-800/80 flex justify-between text-xs text-zinc-400">
+              <span>Monthly Waste: <strong id="monthlyLoss" class="text-white font-mono">$6,066</strong></span>
+              <span>Hours/Year Lost: <strong id="hoursYearly" class="text-white font-mono">2,080 hrs</strong></span>
+            </div>
+
+            <button onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })" class="w-full py-2.5 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-brandCyan"></i>
+              Eliminate This Waste
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4-Stage Architectural Process -->
+    <section id="process" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="text-center space-y-3 mb-16">
+        <h2 class="text-xs font-mono font-bold tracking-widest text-brandCyan uppercase">Engineering Lifecycle</h2>
+        <h3 class="text-3xl font-extrabold text-white">How We Deploy Your Platform</h3>
+        <p class="text-sm text-zinc-400">Strict enterprise milestones with zero ambiguous timelines.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="glass-card rounded-xl p-5 border-t-2 border-t-brandBlue">
+          <div class="text-brandCyan font-mono font-bold text-xs">STAGE 01</div>
+          <h4 class="text-sm font-bold text-white mt-2">Bottleneck Audit</h4>
+          <p class="text-xs text-zinc-400 mt-2">Deep analysis of manual data handoffs, paperwork delays, and duplicate tasks.</p>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 border-t-2 border-t-brandBlue">
+          <div class="text-brandCyan font-mono font-bold text-xs">STAGE 02</div>
+          <h4 class="text-sm font-bold text-white mt-2">System Blueprint</h4>
+          <p class="text-xs text-zinc-400 mt-2">Architecture maps, secure data schema definitions, and interactive UI wireframes.</p>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 border-t-2 border-t-brandBlue">
+          <div class="text-brandCyan font-mono font-bold text-xs">STAGE 03</div>
+          <h4 class="text-sm font-bold text-white mt-2">Robust Build</h4>
+          <p class="text-xs text-zinc-400 mt-2">Clean, production-grade web apps built with enterprise CI/CD and security rules.</p>
+        </div>
+
+        <div class="glass-card rounded-xl p-5 border-t-2 border-t-brandBlue">
+          <div class="text-brandCyan font-mono font-bold text-xs">STAGE 04</div>
+          <h4 class="text-sm font-bold text-white mt-2">Telemetry & Scale</h4>
+          <p class="text-xs text-zinc-400 mt-2">Deployment, real-time logging, staff training, and zero-downtime maintenance.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Lead Intake & Qualification Form -->
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 border-t border-brandBorder/40 bg-zinc-950">
+      <div class="max-w-3xl mx-auto">
+        
+        <div class="text-center space-y-3 mb-10">
+          <span class="text-xs font-mono font-bold tracking-widest text-brandBlue uppercase">Initiate Discovery</span>
+          <h3 class="text-3xl font-extrabold text-white">Request Your Architecture Blueprint</h3>
+          <p class="text-xs sm:text-sm text-zinc-400">Tell us what manual workflows you want eliminated. Our engineering team responds within 24 business hours.</p>
+        </div>
+
+        <form id="leadForm" class="glass-card rounded-2xl p-6 sm:p-10 border border-brandBorder space-y-5">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="clientName" class="block text-xs font-medium text-zinc-300 mb-1.5">Full Name *</label>
+              <input type="text" id="clientName" required placeholder="Alex Mercer" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-brandBlue transition-colors">
+            </div>
+
+            <div>
+              <label for="businessName" class="block text-xs font-medium text-zinc-300 mb-1.5">Business / Contracting Firm *</label>
+              <input type="text" id="businessName" required placeholder="Apex Contracting Ltd" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-brandBlue transition-colors">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label for="email" class="block text-xs font-medium text-zinc-300 mb-1.5">Work Email Address *</label>
+              <input type="email" id="email" required placeholder="alex@apexbuild.com" class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-brandBlue transition-colors">
+            </div>
+
+            <div>
+              <label for="serviceCategory" class="block text-xs font-medium text-zinc-300 mb-1.5">Primary Target Solution *</label>
+              <select id="serviceCategory" required class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-brandBlue transition-colors">
+                <option value="Workflow & Process Automation">Workflow & Process Automation</option>
+                <option value="Custom Web App / Client Portal">Custom Web App / Client Portal</option>
+                <option value="Contractor Estimating & Field Tools">Contractor Estimating & Field Tools</option>
+                <option value="Cloud Systems & DevOps Maintenance">Cloud Systems & DevOps Maintenance</option>
+                <option value="Full Architecture Discovery Audit">Full Architecture Discovery Audit</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="hoursLost" class="block text-xs font-medium text-zinc-300 mb-1.5">Estimated Weekly Hours Lost to Repetitive Manual Work *</label>
+            <select id="hoursLost" required class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-brandBlue transition-colors">
+              <option value="1 - 5 hours">1 - 5 hours/week</option>
+              <option value="6 - 15 hours">6 - 15 hours/week (Noticeable drain)</option>
+              <option value="16 - 30 hours">16 - 30 hours/week (Heavy operational drag)</option>
+              <option value="30+ hours">30+ hours/week (Urgent bottleneck)</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="projectNotes" class="block text-xs font-medium text-zinc-300 mb-1.5">Briefly describe the bottleneck or project goal *</label>
+            <textarea id="projectNotes" rows="4" required placeholder="e.g., We spend 15 hours a week taking orders on WhatsApp and re-keying them into Excel and sending manual PDF invoices..." class="w-full px-3.5 py-2.5 rounded-lg bg-zinc-900 border border-zinc-700/80 text-white text-xs focus:outline-none focus:border-brandBlue transition-colors"></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-brandBlue to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold text-xs tracking-wide shadow-xl shadow-blue-500/25 flex items-center justify-center gap-2 transition-all">
+            <span id="btnText">Submit Architecture Request</span>
+            <i data-lucide="send" id="btnIcon" class="w-3.5 h-3.5"></i>
+          </button>
+
+          <p class="text-[11px] text-zinc-500 text-center">
+            Zero vendor lock-in. All submissions are governed under strict engineering confidentiality.
+          </p>
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Enterprise Footer -->
+  <footer class="border-t border-brandBorder bg-black py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-zinc-400">
+      <div class="flex items-center gap-3">
+        <div class="w-6 h-6 rounded bg-brandBlue flex items-center justify-center text-white font-bold text-[10px]">
+          RND
+        </div>
+        <span>&copy; <span id="currentYear"></span> RND Tech & Solutions. All rights reserved.</span>
+      </div>
+
+      <div class="flex items-center gap-6">
+        <span>DevOps & Cloud Standards</span>
+        <span>Zero-Downtime Architecture</span>
+        <a href="#contact" class="text-zinc-300 hover:text-white transition-colors">Client Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Application Logic & Webhook Handler -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Set Copyright Year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // ==========================================
+    // 1. Interactive ROI Calculator Logic
+    // ==========================================
+    const teamSizeInput = document.getElementById('teamSize');
+    const hoursPerWeekInput = document.getElementById('hoursPerWeek');
+    const hourlyRateInput = document.getElementById('hourlyRate');
+
+    const teamSizeVal = document.getElementById('teamSizeVal');
+    const hoursPerWeekVal = document.getElementById('hoursPerWeekVal');
+    const hourlyRateVal = document.getElementById('hourlyRateVal');
+
+    const annualLossDisplay = document.getElementById('annualLoss');
+    const monthlyLossDisplay = document.getElementById('monthlyLoss');
+    const hoursYearlyDisplay = document.getElementById('hoursYearly');
+
+    function calculateROI() {
+      const team = parseInt(teamSizeInput.value, 10);
+      const hours = parseInt(hoursPerWeekInput.value, 10);
+      const rate = parseInt(hourlyRateInput.value, 10);
+
+      teamSizeVal.textContent = `${team} ${team === 1 ? 'person' : 'people'}`;
+      hoursPerWeekVal.textContent = `${hours} hrs`;
+      hourlyRateVal.textContent = `$${rate} / hr`;
+
+      const weeklyHours = team * hours;
+      const yearlyHours = weeklyHours * 52;
+      const annualCost = yearlyHours * rate;
+      const monthlyCost = Math.round(annualCost / 12);
+
+      annualLossDisplay.textContent = `$${annualCost.toLocaleString()}`;
+      monthlyLossDisplay.textContent = `$${monthlyCost.toLocaleString()}`;
+      hoursYearlyDisplay.textContent = `${yearlyHours.toLocaleString()} hrs`;
+    }
+
+    teamSizeInput.addEventListener('input', calculateROI);
+    hoursPerWeekInput.addEventListener('input', calculateROI);
+    hourlyRateInput.addEventListener('input', calculateROI);
+    calculateROI();
+
+    // ==========================================
+    // 2. Toast System
+    // ==========================================
+    function showToast(message, type = 'success') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      
+      const bgColor = type === 'success' ? 'bg-zinc-900 border-emerald-500/50 text-emerald-400' : 'bg-zinc-900 border-rose-500/50 text-rose-400';
+      
+      toast.className = `flex items-center gap-3 px-4 py-3 rounded-xl border ${bgColor} text-xs shadow-2xl transition-all duration-300 transform translate-x-full`;
+      toast.innerHTML = `
+        <span class="font-medium text-white">${message}</span>
+      `;
+
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-full');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-x-full');
+        setTimeout(() => toast.remove(), 300);
+      }, 4500);
+    }
+
+    // ==========================================
+    // 3. Lead Qualification Form & Webhook Logic
+    // ==========================================
+    // Paste your Google Apps Script Web App URL below
+    const APPS_SCRIPT_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyXmNUpJDols2EvjWqhVTwWNcEt9Ka-yZyNcSTcS7tkpoyd9BNl62yrHWvM7jE-FA3m/exec";
+
+    const leadForm = document.getElementById('leadForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnIcon = document.getElementById('btnIcon');
+
+    function sanitizeInput(str) {
+      return str.replace(/[<>]/g, '').trim();
+    }
+
+    leadForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const payload = {
+        timestamp: new Date().toISOString(),
+        clientName: sanitizeInput(document.getElementById('clientName').value),
+        businessName: sanitizeInput(document.getElementById('businessName').value),
+        email: sanitizeInput(document.getElementById('email').value),
+        serviceCategory: document.getElementById('serviceCategory').value,
+        hoursLostPerWeek: document.getElementById('hoursLost').value,
+        projectNotes: sanitizeInput(document.getElementById('projectNotes').value)
+      };
+
+      // Basic client-side validation
+      if (!payload.clientName || !payload.businessName || !payload.email || !payload.projectNotes) {
+        showToast("Please fill in all required fields.", "error");
+        return;
+      }
+
+      // UI Loading state
+      submitBtn.disabled = true;
+      btnText.textContent = "Routing to Engineering Queue...";
+      btnIcon.classList.add('animate-spin');
+
+      try {
+        if (APPS_SCRIPT_WEBHOOK_URL === "https://script.google.com/macros/s/AKfycbyXmNUpJDols2EvjWqhVTwWNcEt9Ka-yZyNcSTcS7tkpoyd9BNl62yrHWvM7jE-FA3m/exec") {
+          // Fallback simulation for local development testing
+          await new Promise(resolve => setTimeout(resolve, 1200));
+          console.info("Mock submission payload logged:", payload);
+          showToast("Simulation: Request received! Insert your Apps Script URL to persist to Sheets.");
+          leadForm.reset();
+        } else {
+          // Production POST to Google Apps Script (text/plain to prevent CORS preflight block)
+          const response = await fetch(APPS_SCRIPT_WEBHOOK_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+              'Content-Type': 'text/plain;charset=utf-8'
+            },
+            body: JSON.stringify(payload)
+          });
+
+          showToast("Blueprint request submitted! Our engineering team will contact you shortly.");
+          leadForm.reset();
+        }
+      } catch (err) {
+        console.error("Submission failed:", err);
+        showToast("Submission failed. Please check network connection or retry.", "error");
+      } finally {
+        submitBtn.disabled = false;
+        btnText.textContent = "Submit Architecture Request";
+        btnIcon.classList.remove('animate-spin');
+      }
+    });
+  </script>
+</body>
+</html>
