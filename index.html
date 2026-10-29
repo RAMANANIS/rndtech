@@ -511,7 +511,7 @@
     // 3. Lead Qualification Form & Webhook Logic
     // ==========================================
     // Paste your Google Apps Script Web App URL below
-    const APPS_SCRIPT_WEBHOOK_URL = "YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE";
+    const APPS_SCRIPT_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyXmNUpJDols2EvjWqhVTwWNcEt9Ka-yZyNcSTcS7tkpoyd9BNl62yrHWvM7jE-FA3m/exec";
 
     const leadForm = document.getElementById('leadForm');
     const submitBtn = document.getElementById('submitBtn');
@@ -547,7 +547,7 @@
       btnIcon.classList.add('animate-spin');
 
       try {
-        if (APPS_SCRIPT_WEBHOOK_URL === "YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE") {
+        if (APPS_SCRIPT_WEBHOOK_URL === "https://script.google.com/macros/s/AKfycbyXmNUpJDols2EvjWqhVTwWNcEt9Ka-yZyNcSTcS7tkpoyd9BNl62yrHWvM7jE-FA3m/exec") {
           // Fallback simulation for local development testing
           await new Promise(resolve => setTimeout(resolve, 1200));
           console.info("Mock submission payload logged:", payload);
